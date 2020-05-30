@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Countdown Timer</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container-message100" >
+	<!-- input formfield countdown message -->
+	<div class="wrap-message100" id = "countdown-form">
+		<form class="message100-form"> 
+			<div id="messageInput">
+				<span class="message100-form-title">
+					Please enter your Countdown Text <br> into the textarea below:
+				</span>
+
+				<!-- message input field -->
+				<div class="wrap-input100">
+					<textarea class="input100" rows="5" id="eventText" name="text" placeholder="Your Countdown Message"></textarea>
+					<span class="focus-input100"></span>
+				</div>	
+				
+				<!-- countdown buttons -->
+				<div class="container-message100-form-btn" id="btn-container">
+					<div class="col-xs-1">
+						<button type="button" class="message100-form-btn" value="5" onclick="updateCountdown(5)">5 sec</button>
+					</div>
+					<div class="col-xs-1">
+						<button type="button" class="message100-form-btn" value="10" onclick="updateCountdown(10)">10 sec</button>
+					</div>
+					<div class="col-xs-1">
+						<button type="button" class="message100-form-btn" value="15" onclick="updateCountdown(15)">15 sec</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- message output (after countdown) -->
+			<div id="messageOutput">
+				<p id="msg"> </p>
+				<a href="index.html">
+					<button type="button" class="message100-form-btn" id="restartButton" formaction="index.html">new Countdown</button>
+				</a>
+			</div>
+		</form>
+	</div>
+	
+	<!-- countdown -->
+	<p id="counter"></p>
+
+</div>
+
+<!-- Countdown Event -->
+<script src="countdown.js"></script>
+
+</body>
+</html>
